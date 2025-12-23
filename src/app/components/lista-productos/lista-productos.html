@@ -1,0 +1,35 @@
+<div class="container">
+  <h2>Lista de productos</h2>
+
+  <div class="actions">
+    <button class="btn btn-add" (click)="agregar()">Agregar producto</button>
+    <button class="btn btn-clear" (click)="limpiarLista()">Limpiar lista</button>
+  </div>
+
+  <app-producto-form
+    *ngIf="showForm"
+    [producto]="productoEditar"
+    (guardar)="guardarProducto($event)"
+    (cancelar)="cancelarForm()"
+  ></app-producto-form>
+
+  <ul class="product-list" *ngIf="!loading && products.length > 0">
+    <li class="product-card" *ngFor="let product of products">
+      <div>
+        <h3>{{ product.nombre }}</h3>
+
+        <p>Precio original: ${{ product.precio }}</p>
+
+        <p>
+          Precio con descuento: {{ porcentaje_descuento }}% →
+          ${{ product.precio | descuento: porcentaje_descuento }}
+        </p>
+
+        <div class="card-actions">
+          <button class="btn btn-edit" (click)="editar(product)">Editar</button>
+          <button class="btn btn-delete" (click)="eliminar(product.id)">Eliminar</button>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

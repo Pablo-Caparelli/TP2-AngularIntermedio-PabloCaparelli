@@ -1,0 +1,18 @@
+<form [formGroup]="productoForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label>Nombre:</label>
+    <input type="text" formControlName="nombre" />
+  </div>
+  <div>
+    <label>Descripción:</label>
+    <input type="text" formControlName="descripcion" />
+  </div>
+  <div>
+    <label>Precio:</label>
+    <input type="number" formControlName="precio" />
+  </div>
+
+  <button type="submit" [disabled]="productoForm.invalid">Guardar</button>
+  <button type="button" (click)="onCancelar()">Cancelar</button>
+</form>
+
