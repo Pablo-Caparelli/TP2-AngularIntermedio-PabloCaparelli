@@ -42,7 +42,6 @@ export class ProductosService {
 
   constructor() {}
 
-  // 📥 Cargar productos desde storage o iniciales
   private cargarDesdeStorage(): Producto[] {
     const data = localStorage.getItem(this.STORAGE_KEY);
 
@@ -56,17 +55,14 @@ export class ProductosService {
     return [...this.inicial];
   }
 
-  // 💾 Guardar en storage
   private guardarEnStorage() {
     localStorage.setItem(this.STORAGE_KEY, JSON.stringify(this.productosSubject.getValue()));
   }
 
-  // 📡 Obtener productos
   getProductos(): Observable<Producto[]> {
     return this.productosSubject.asObservable();
   }
 
-  // ➕ Agregar producto
   addProducto(producto_parcial: Partial<Producto>) {
     const productos_actuales = this.productosSubject.getValue();
 
@@ -83,7 +79,6 @@ export class ProductosService {
     this.guardarEnStorage();
   }
 
-  // 🗑 Eliminar producto
   deleteProducto(product_id: number) {
     const productos_filtrados = this.productosSubject
       .getValue()
@@ -93,7 +88,6 @@ export class ProductosService {
     this.guardarEnStorage();
   }
 
-  // 🔄 Resetear al estado inicial
   reset() {
     this.productosSubject.next([...this.inicial]);
     this.nextId = Math.max(...this.inicial.map(p => p.id)) + 1;

@@ -23,7 +23,7 @@ h2 {
 }
 
 .product-card {
-  background: #f8f9fa;
+  background: #eaf2fa;
   padding: 1rem;
   border-radius: 10px;
   margin-bottom: 1rem;
@@ -36,7 +36,6 @@ h2 {
   margin-top: 0.8rem;
 }
 
-/* Botones base */
 .btn {
   padding: 8px 14px;
   border: none;
@@ -46,29 +45,26 @@ h2 {
   transition: 0.2s ease;
 }
 
-/* Acciones principales */
 .btn-add {
   background-color: #007bff;
   color: white;
 }
 
 .btn-clear {
-  background-color: #6c757d;
+  background-color: rgb(204, 40, 204);
   color: white;
 }
 
-/* Botones de tarjeta */
 .btn-edit {
-  background-color: #28a745; /* Verde */
+  background-color: #28a745;
   color: white;
 }
 
 .btn-delete {
-  background-color: #dc3545; /* Rojo */
+  background-color: #dc3545;
   color: white;
 }
 
-/* Hover */
 .btn:hover {
-  opacity: 0.85;
+  opacity: 0.70;
 }
