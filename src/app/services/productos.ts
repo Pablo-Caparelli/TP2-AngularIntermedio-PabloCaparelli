@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Producto } from '../models/producto.model';
 import { BehaviorSubject, Observable } from 'rxjs';
+import Toastify from 'toastify-js';
+
 
 @Injectable({
   providedIn: 'root',
@@ -77,6 +79,24 @@ export class ProductosService {
     const nueva_lista = [...productos_actuales, new_producto];
     this.productosSubject.next(nueva_lista);
     this.guardarEnStorage();
+
+    Toastify({
+    text: "✔️  Producto agregado correctamente",
+    duration: 3000,
+    gravity: "top",
+    position: "center",
+    close: true,
+    stopOnFocus: true,
+    style: {
+    background: "linear-gradient(135deg, #22c55e, #ecfdf5)",
+    color: "#065f46",
+    fontWeight: "600",
+    borderRadius: "12px",
+    padding: "14px 22px",
+    fontSize: "15px",
+    boxShadow: "0 12px 25px rgba(0,0,0,0.15)"
+  }
+  }).showToast();
   }
 
   deleteProducto(product_id: number) {
@@ -86,7 +106,56 @@ export class ProductosService {
 
     this.productosSubject.next(productos_filtrados);
     this.guardarEnStorage();
+
+    Toastify({
+  text: "❌  Producto eliminado correctamente",
+  duration: 3000,
+  gravity: "top",
+  position: "center",
+  close: true,
+  stopOnFocus: true,
+  style: {
+    background: "linear-gradient(135deg, #ef4444, #fee2e2)",
+    color: "#7f1d1d",
+    fontWeight: "600",
+    borderRadius: "12px",
+    padding: "14px 22px",
+    fontSize: "15px",
+    boxShadow: "0 12px 25px rgba(0,0,0,0.15)"
   }
+}).showToast();
+
+  }
+
+  updateProducto(productoActualizado: Producto) {
+  const productos = this.productosSubject.getValue();
+
+  const nuevaLista = productos.map(p =>
+    p.id === productoActualizado.id ? productoActualizado : p
+  );
+
+  this.productosSubject.next(nuevaLista);
+  this.guardarEnStorage();
+
+  Toastify({
+    text: "✏️  Producto actualizado correctamente",
+    duration: 3000,
+    gravity: "top",
+    position: "center",
+    close: true,
+    stopOnFocus: true,
+    style: {
+      background: "linear-gradient(135deg, #3b82f6, #dbeafe)",
+      color: "#1e3a8a",
+      fontWeight: "600",
+      borderRadius: "12px",
+      padding: "14px 22px",
+      fontSize: "15px",
+      boxShadow: "0 12px 25px rgba(0,0,0,0.15)"
+    }
+  }).showToast();
+}
+
 
   reset() {
     this.productosSubject.next([...this.inicial]);

@@ -3,7 +3,7 @@
 
   <div class="actions">
     <button class="btn btn-add" (click)="agregar()">Agregar producto</button>
-    <button class="btn btn-clear" (click)="limpiarLista()">Limpiar lista</button>
+    <button class="btn btn-clear" (click)="limpiarLista()">Reiniciar lista</button>
   </div>
 
   <app-producto-form
@@ -17,6 +17,8 @@
     <li class="product-card" *ngFor="let product of products">
       <div>
         <h3>{{ product.nombre }}</h3>
+
+        <p>Descripción: {{ product.descripcion }}</p>
 
         <p>Precio original: ${{ product.precio }}</p>
 

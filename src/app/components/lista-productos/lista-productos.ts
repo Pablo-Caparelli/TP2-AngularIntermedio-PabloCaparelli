@@ -38,13 +38,16 @@ export class ListaProductos implements OnInit {
   editar(producto: Producto) {
     this.productoEditar = producto;
     this.showForm = true;
+     
   }
 
   guardarProducto(productoData: Partial<Producto>) {
     if (this.productoEditar) {
       const actualizado: Producto = { ...this.productoEditar, ...productoData };
-      this.productosService.deleteProducto(actualizado.id);
-      this.productosService.addProducto(actualizado);
+      //this.productosService.deleteProducto(actualizado.id);
+      //this.productosService.addProducto(actualizado);
+      this.productosService.updateProducto(actualizado);
+
     } else {
       this.productosService.addProducto(productoData);
     }

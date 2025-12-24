@@ -39,7 +39,7 @@ export class ProductoFormComponent implements OnChanges {
   onSubmit() {
     if (this.productoForm.valid) {
       this.guardar.emit(this.productoForm.value);
-      this.productoForm.reset();
+      this.productoForm.reset()
     }
   }
 
