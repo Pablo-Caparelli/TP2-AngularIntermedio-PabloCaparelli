@@ -51,7 +51,8 @@ http://localhost:4200
 ![(./public/ListaDeProductos-PantallaChica.jpeg)](public/ListaDeProductos-PantallaChica.jpeg)
 ![(./public/ListaDeProductos-PantallaGrande.jpeg)](public/ListaDeProductos-PantallaGrande.jpeg)
 ![./public/Toastify-ProductoActualizado.jpeg](public/Toastify-ProductoActualizado.jpeg)
-![(./public/Toastify - Producto Agregado.jpeg)](<public/Toastify-Producto Eliminado.jpeg>)
+![./public/Toastify-ProductoAgregado.jpeg](public/Toastify-ProductoAgregado.jpeg)
+![./public/Toastify-ProductoEliminado.jpeg](<public/Toastify-ProductoEliminado.jpeg>)
 
 👨‍🎓 Créditos
 TP2 - Angular intermedio
