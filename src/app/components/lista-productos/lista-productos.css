@@ -18,9 +18,14 @@ h2 {
 }
 
 .product-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
   list-style: none;
   padding: 0;
+  margin: 0;
 }
+
 
 .product-card {
   background: #eaf2fa;
@@ -68,3 +73,16 @@ h2 {
 .btn:hover {
   opacity: 0.70;
 }
+
+@media (min-width: 1300px) {
+  .product-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1299px) {
+  .product-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
