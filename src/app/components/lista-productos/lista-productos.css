@@ -17,6 +17,12 @@ h2 {
   margin-bottom: 1.5rem;
 }
 
+.no-products {
+  text-align: center;
+  font-size: 2rem;
+  color: rgb(69, 236, 222)
+}
+
 .product-list {
   display: grid;
   grid-template-columns: 1fr;
