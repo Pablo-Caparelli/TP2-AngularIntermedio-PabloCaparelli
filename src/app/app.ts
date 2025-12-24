@@ -10,5 +10,5 @@ import { DescuentoPipe } from './pipes/descuento-pipe';
   styleUrl: './app.css',
 })
 export class App {
-  protected readonly title = signal('clase-3');
+  protected readonly title = signal('TP2 - Pablo Caparelli');
 }
