@@ -9,7 +9,7 @@ El sistema utiliza componentes standalone, formularios reactivos y un servicio c
 
 ---
 
-## ⚙️ Tecnologías utilizadas
+## ⚙️ Tecnologías utilizadas:
 
 - Angular
 - TypeScript
@@ -24,7 +24,6 @@ El sistema utiliza componentes standalone, formularios reactivos y un servicio c
 
 ### 1️⃣ Clonar el repositorio
 
-```bash
 git clone https://github.com/tu-usuario/tu-repositorio.git
 cd tu-repositorio
 
@@ -45,6 +44,15 @@ http://localhost:4200
 ♻️ Restablecer lista inicial
 💾 Persistencia de datos con LocalStorage
 🔔 Notificaciones visuales con Toastify
+
+## 🖼️ Capturas de Pantalla
+![(./public/Formulario-AgregarProducto.jpeg)](public/Formulario-AgregarProducto.jpeg)
+![(public/Formulario-AgregarProductoConDatosDeProducto.jpeg)](public/Formulario-AgregarProductoConDatosDeProducto.jpeg)
+![(./public/ListaDeProductos-PantallaChica.jpeg)](public/ListaDeProductos-PantallaChica.jpeg)
+![(./public/ListaDeProductos-PantallaGrande.jpeg)](public/ListaDeProductos-PantallaGrande.jpeg)
+![(./public/Toastify - Producto Actualizado.jpeg)](<public/Toastify-Producto Agregado.jpeg>)
+![(./public/Toastify - Producto Agregado.jpeg)](<public/Toastify-Producto Eliminado.jpeg>)
+
 
 👨‍🎓 Créditos
 TP2 - Angular intermedio
