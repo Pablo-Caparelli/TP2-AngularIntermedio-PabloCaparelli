@@ -24,11 +24,11 @@
 
         <p>Descripción: {{ product.descripcion }}</p>
 
-        <p>Precio original: ${{ product.precio | currency:'ARS':'symbol':'1.0-0' }}</p>
+        <p>Precio original: {{ product.precio | currency:'ARS':'symbol':'1.0-0' }}</p>
 
         <p>
           Precio con descuento: {{ porcentaje_descuento }}% →
-          ${{ product.precio | descuento: porcentaje_descuento }}
+          $ {{ product.precio | descuento: porcentaje_descuento }}
         </p>
 
         <p>Fecha de alta: {{ product.fechaAlta | date:'dd-MM-yyyy' }}</p>
