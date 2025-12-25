@@ -24,7 +24,7 @@
 
         <p>Descripción: {{ product.descripcion }}</p>
 
-        <p>Precio original: ${{ product.precio }}</p>
+        <p>Precio original: ${{ product.precio | currency:'ARS':'symbol':'1.0-0' }}</p>
 
         <p>
           Precio con descuento: {{ porcentaje_descuento }}% →
